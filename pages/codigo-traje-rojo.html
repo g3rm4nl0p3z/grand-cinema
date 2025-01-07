@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Cinema | Código traje rojo</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/logo.png" type="image/png">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Styles (Bootstrap) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- External fonts -->
+    <link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/logo.png" class="header__logo" alt="logo-grand-cinema" title="Logo Grand Cinema">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="cartelera.html">Cartelera</a></li>
+                        <li class="nav-item"><a class="nav-link" href="proximos-estrenos.html">Próximos Estrenos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="calificaciones.html">Calificaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="titulo titulo-encabezado">
+            <h1>CÓDIGO: TRAJE ROJO</h1>
+            <a class="titulo__link-volver" href="cartelera.html">
+                <i class="bi bi-arrow-left-square-fill"></i>
+            </a>
+        </div>
+        <div class="pelicula">
+            <!-- Portada Código traje rojo -->
+            <div class="pelicula__poster">
+                <img src="../images/poster-codigo-traje-rojo.png" class="poster__poster" alt="poster-codigo-traje-rojo">
+            </div>
+
+            <!-- Horarios -->
+            <div class="pelicula__horarios">
+                <details class="horarios__horario">
+                    <summary class="horarios__formato">Horarios 2D - CAST</summary>
+                    <p class="horarios__funciones">
+                        19:10 hs. | 21:50 hs.
+                    </p>
+                </details>
+                <details class="horarios__horario">
+                    <summary class="horarios__formato">Horarios 2D - SUB</summary>
+                    <p class="horarios__funciones">
+                        23:10 hs.
+                    </p>
+                </details>
+            </div>
+
+            <!-- Ficha Técnica -->
+            <div class="pelicula__ficha">
+                <h2 class="ficha__titulo">Ficha técnica</h2>
+                <p class="ficha__ficha-tecnica">
+                    <strong>Título Original:</strong> Red One <br>
+                    <strong>Origen:</strong> USA <br>
+                    <strong>Género:</strong> Acción, Aventura, Comedia, Misterio <br>
+                    <strong>Director:</strong> Jake Kasdan <br>
+                    <strong>Actores:</strong> Dwayne Johnson, Chris Evans, J.K. Simmons, Bonnie Hunt, Kristofer Hivju, Kiernan Shipka, Lucy Liu, Nick Kroll, Wesley Kimmel, Mary Elizabeth Ellis <br>
+                    <strong>Calificación:</strong> SAM 13 <br>
+                    <strong>Duración:</strong> 142 min. <br>
+                    <strong>Distribuidora:</strong> Warner Bros <br>
+                </p>
+            </div>
+
+            <!-- Resúmen -->
+            <div class="pelicula__resumen">
+                <h2 class="resumen__titulo">Sinopsis</h2>
+                <p class="resumen__sinopsis">
+                    Después de que Santa Claus –con nombre en clave: Traje Rojo– es secuestrado, el Jefe de Seguridad del Polo Norte (Dwayne Johnson) debe unirse al cazador de recompensas más infame del mundo (Chris Evans) en una misión llena de acción y que los lleva alrededor del mundo para salvar la Navidad.
+                </p>
+            </div>
+
+            <!-- Trailer -->
+            <div class="pelicula__trailer">
+                <iframe src="https://www.youtube.com/embed/qK4hLUjrsHY?si=je5sq-3MLsHhXrPu" class="trailer__video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="../index.html">
+            <img src="../images/logo.png" class="footer__logo" alt="logo-grand-cinema" title="Logo Grand Cinema">
+        </a>
+        <div class="footer__copy">
+            <p>
+                &copy; Copyright 2024 - Germán López. <br> Todos los derechos reservados.
+            </p>
+        </div>
+        <div class="footer__redes">
+            <a class="footer__link" href="#" rel="noopener noreferrer nofollow"><i class="bi bi-facebook"></i></a>
+            <a class="footer__link" href="#" rel="noopener noreferrer nofollow"><i class="bi bi-instagram"></i></a>
+            <a class="footer__link" href="#" rel="noopener noreferrer nofollow"><i class="bi bi-twitter-x"></i></a>
+            <a class="footer__link" href="#" rel="noopener noreferrer nofollow"><i class="bi bi-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
