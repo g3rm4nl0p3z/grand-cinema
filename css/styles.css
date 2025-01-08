@@ -431,7 +431,34 @@ body {
 
 /* PRECIOS */
 
+.precios {
+    margin: 1.25rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
 
+.precios__precios,
+.precios__informacion {
+    font-size: 0.70rem;
+    margin-bottom: 1rem;
+}
+
+.table__titulos {
+    font-size: 1rem;
+}
+
+.precios__adicional {
+    text-align: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.informacion__link {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #33052e;
+    text-decoration: none;
+}
 
 
 
