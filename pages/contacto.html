@@ -45,83 +45,94 @@
     </header>
 
     <main>
-        <h1 class="titulo-encabezado">CONTÁCTANOS</h1>
-        <div>
-            <div>
-                <div>
-                    <img src="../images/img-festeja.png" alt="">
-                    <p>
+        <article>
+            <h1 class="titulo-encabezado">CONTÁCTANOS</h1>
+            <div class="contactanos">
+                <div class="contactanos__ofertas ofertas--festeja">
+                    <img src="../images/img-festeja.png" class="ofertas__img" alt="festeja-tu-cumple">
+                    <p class="ofertas__descripcion">
                         Festejá tu cumpleaños con nosotros.
                     </p>
                 </div>
-                <div>
-                    <img src="../images/img-salas-eventos.png" alt="">
-                    <p>
-                        Alquilá nuestras de salas para funciones privadas, eventos, conferencias o lanzamiento de productos.
-                    </p>
-                </div>
-                <div>
-                    <img src="../images/img-merchandising.png" alt="">
-                    <p>
+
+                <div class="contactanos__ofertas ofertas--merchandising">
+                    <img src="../images/img-merchandising.png" class="ofertas__img" alt="merchandising-favorito">
+                    <p class="ofertas__descripcion">
                         Conseguí el merchandising de tus películas favoritas.
                     </p>
                 </div>
-            </div>
-            <div>
-                <div>
-                    <img src="../images/img-publicitar.png" alt="">
-                    <p>
-                        Adquirí uno de nuestros espacios para publicitar tu empresa o emprendimiento.
-                    </p>
-                </div>
-                <div>
-                    <img src="../images/img-sorteos.png" alt="">
-                    <p>
+
+                <div class="contactanos__ofertas ofertas--sorteos">
+                    <img src="../images/img-sorteos.png" class="ofertas__img" alt="sorteos-semanales">
+                    <p class="ofertas__descripcion">
                         Conocé más acerca de nuestras promociones y sorteos semanales.
                     </p>
                 </div>
-                <div>
-                    <p>
+
+                <div class="contactanos__ofertas ofertas--publicitar">
+                    <img src="../images/img-publicitar.png" class="ofertas__img" alt="publicita-tu-empresa">
+                    <p class="ofertas__descripcion">
+                        Adquirí uno de nuestros espacios para publicitar tu empresa o emprendimiento.
+                    </p>
+                </div>
+
+                <div class="contactanos__ofertas ofertas--eventos">
+                    <img src="../images/img-salas-eventos.png" class="ofertas__img" alt="eventos-salas-privadas">
+                    <p class="ofertas__descripcion">
+                        Alquilá nuestras de salas para funciones privadas, eventos, conferencias o lanzamiento de productos.
                     </p>
                 </div>
             </div>
-        </div>
-        <div>
-            <form action="">
-                <label for="nombre-y-apellido">Nombre y Apellido: </label>
-                <input type="text" id="nombre-y-apellido" placeholder="John Doe" required>
+        </article>
 
-                <label for="correo-electronico">Correo Electrónico: </label>
-                <input type="email" id="correo-electronico" placeholder="ejemplo@mail.com" required>
+        <article class="deja-tu-consulta">
+            <h2 class="consulta__titulo">Dejanos tu consulta...</h2>
+            <form class="consulta__formulario">
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="nombre-y-apellido">Nombre y Apellido </label>
+                    <input type="text" id="nombre-y-apellido" class="formulario__input" placeholder="John Doe" required>
+                </div>
 
-                <label for="provincia">Provincia: </label>
-                <select id="provincia" required>
-                    <option value="">(Elige una provincia)</option>
-                    <option value="B">Buenos Aires</option>
-                    <option value="C">Córdoba</option>
-                    <option value="E">Entre Ríos</option>
-                    <option value="M">Mendoza</option>
-                    <option value="S">Santa Cruz</option>
-                    <option value="G">Santiago del Estero</option>
-                    <option value="T">Tucumán</option>
-                </select>
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="correo-electronico">Correo Electrónico </label>
+                    <input type="email" id="correo-electronico" class="formulario__input" placeholder="ejemplo@mail.com" required>
+                </div>
 
-                <label for="motivo">Motivo</label>
-                <select id="motivo" required>
-                    <option value="">(Elige un motivo)</option>
-                    <option value="C">Festejá tu cumpleaños</option>
-                    <option value="A">Alquiler de nuestras salas</option>
-                    <option value="M">Merchandising</option>
-                    <option value="U">Publicidad en nuestros cines</option>
-                    <option value="P">Promociones y sorteos</option>
-                    <option value="O">Otro motivo diferente</option>
-                </select>
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="provincia">Provincia </label>
+                    <select id="provincia" class="formulario__input input--select">
+                        <option value="">(Elige una provincia)</option>
+                        <option value="B">Buenos Aires</option>
+                        <option value="C">Córdoba</option>
+                        <option value="E">Entre Ríos</option>
+                        <option value="M">Mendoza</option>
+                        <option value="S">Santa Cruz</option>
+                        <option value="G">Santiago del Estero</option>
+                        <option value="T">Tucumán</option>
+                    </select>
+                </div>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" placeholder="Deje su mensaje aquí..." required></textarea>
-                <input type="submit" class="form-button">
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="motivo">Motivo</label>
+                    <select id="motivo" class="formulario__input input--select">
+                        <option value="">(Elige un motivo)</option>
+                        <option value="C">Festejá tu cumpleaños</option>
+                        <option value="A">Alquiler de nuestras salas</option>
+                        <option value="M">Merchandising</option>
+                        <option value="U">Publicidad en nuestros cines</option>
+                        <option value="P">Promociones y sorteos</option>
+                        <option value="O">Otro motivo diferente</option>
+                    </select>
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__label" for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" class="formulario__input input--textarea" placeholder="Deje su mensaje aquí..." required></textarea>
+                </div>
+
+                <input type="submit" class="formulario__enviar">
             </form>
-        </div>
+        </article>
     </main>
 
     <footer class="footer">

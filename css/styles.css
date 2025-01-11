@@ -22,10 +22,6 @@ body {
     font-weight: 400;
 }
 
-.cursiva {
-    font-style: italic;
-}
-
 
 
 /* HEADER */
@@ -321,16 +317,13 @@ body {
 
 @media screen and (min-width: 768px) {
     .pelicula {
-        display: grid;
-        margin: 1.25rem 2.5rem;
         grid-template-areas:
         "poster         horarios"
         "poster         ficha_tecnica"
         "resumen        resumen"
         "trailer        trailer";
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-        row-gap: 0.75rem;
+        grid-template-rows: repeat(4, auto);
         column-gap: 1.5rem;
     }
 }
@@ -342,16 +335,12 @@ body {
     }
 
     .pelicula {
-        display: grid;
-        margin: 1.25rem 2.5rem;
         grid-template-areas:
         "poster         trailer"
         "horarios       resumen"
         "ficha_tecnica  resumen";
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
-        row-gap: 0.75rem;
-        column-gap: 1.5rem;
     }
 }
 
@@ -564,31 +553,147 @@ body {
 
 /* CONTACTO */
 
-form {
+.contactanos {
+    display: grid;
     margin: 1.25rem 2.5rem;
+    grid-template-areas:
+    "festeja"
+    "merchandising"
+    "sorteos"
+    "publicitar"
+    "eventos";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    row-gap: 0.75rem;
 }
 
-input, select, textarea {
+.contactanos__ofertas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.80rem;
+}
+
+.ofertas--festeja {
+    grid-area: festeja;
+}
+
+.ofertas--merchandising {
+    grid-area: merchandising;
+}
+
+.ofertas--sorteos {
+    grid-area: sorteos;
+}
+
+.ofertas--publicitar {
+    grid-area: publicitar;
+}
+
+.ofertas--eventos {
+    grid-area: eventos;
+}
+
+.ofertas__img {
+    margin: 0.5rem 0;
+}
+
+.ofertas__descripcion {
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.deja-tu-consulta {
+    margin: 2.5rem 0;
+    padding: 1.5rem 2.5rem;
+    background-color: #e4e4e4;
+}
+
+.consulta__titulo {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #33052e;
+    color: #33052e;
+}
+
+.consulta__formulario {
+    margin: 2rem 0;
+}
+
+.formulario__campo {
+    margin: 1.25rem 0;
+    font-size: 0.75rem;
+}
+
+.formulario__label {
+    margin: 5px 0;
+    font-weight: 700;
+    font-size: 0.80rem;
+}
+
+.formulario__input {
+    padding: 5px;
     width: 100%;
-    padding: 4px;
-    margin: 8px 0;
+}
+
+.input--select,
+.input--textarea {
     font-family: inherit;
 }
 
-textarea {
-    min-width: 100%;
-    min-height: 100px;
+.input--textarea {
     resize: none;
+    min-height: 5rem;
 }
 
-.form-button {
-    width: 50%;
+.formulario__enviar {
+    width: 100%;
+    padding: 5px;
+    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
+    border: 1px solid #33052e;
+    border-radius: 5px;
+    background-color: #33052e;
+    color: #f2e5a2;
 }
 
 
 
+@media screen and (min-width: 576px) {
+    .contactanos {
+        grid-template-areas:
+        "festeja    merchandising"
+        "sorteos    publicitar"
+        "eventos    eventos";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contactanos {
+        grid-template-areas:
+        "festeja    sorteos     sorteos     merchandising"
+        "publicitar publicitar  eventos     eventos";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .consulta__formulario {
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        max-width: 75%;
+    }
+
+    .formulario__enviar:hover {
+        font-weight: 700;
+        background-color: #94748c;
+        color: #33052e;
+    }
+}
 
 
 
