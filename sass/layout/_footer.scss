@@ -1,0 +1,35 @@
+
+@use '../base/variables' as v;
+
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 2.5rem;
+    background-color: v.$color-primario;
+    color: v.$color-secundario;
+    font-size: 1rem;
+}
+
+.footer__logo {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.footer__copy {
+    margin: 1.25rem 0;
+    text-align: center;
+}
+
+.footer__redes {
+    margin-bottom: 0.75rem;
+}
+
+.footer__link {
+    padding: 0 0.75rem;
+    color: v.$color-secundario;
+    font-size: 1.25rem;
+    text-decoration: none;
+}

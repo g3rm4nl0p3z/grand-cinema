@@ -1,0 +1,84 @@
+
+@use '../base/variables' as v;
+
+
+/* Calificaciones */
+.calificaciones {
+    margin: 1.25rem 2.5rem;
+}
+
+.calificaciones__card {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.calificaciones__mpa {
+    min-width: 150px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid v.$color-primario;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.calificaciones__mpa--atp {
+    background-color: v.$color-atp;
+}
+
+.calificaciones__mpa--edad-apropiada {
+    background-color: v.$color-apropiado;
+}
+
+.calificaciones__mpa--restringido {
+    background-color: v.$color-restringido;
+}
+
+.calificaciones__descripcion {
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.autorizacion {
+    margin: 2.5rem 0;
+    padding: 1.5rem 2.5rem;
+    background-color: v.$color-bloque;
+}
+
+.autorizacion__titulo {
+    color: v.$color-primario;
+    border-bottom: 2px solid v.$color-primario;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.autorizacion__subtitulo {
+    margin-top: 0.75rem;
+    color: v.$color-primario;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.autorizacion__descripcion {
+    margin: 0.75rem 0;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.autorizacion__resolucion {
+    color: v.$color-primario;
+    font-weight: 700;
+}
+
+.autorizacion__link {
+    margin: 0.75rem 0;
+    padding: 0.5rem;
+    background-color: v.$color-secundario-hover;
+    color: v.$color-primario;
+    border: 2px solid v.$color-primario;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}

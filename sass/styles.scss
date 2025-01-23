@@ -1,0 +1,19 @@
+
+/* Bases del sitio (reset y tipografía) */
+@use 'base/reset';
+@use 'base/base';
+
+@use 'layout/header';
+@use 'layout/titulos';
+@use 'layout/footer';
+
+/* Pages del sitio */
+@use 'pages/home';
+@use 'pages/cartelera';
+@use 'pages/proximos-estrenos';
+@use 'pages/precios';
+@use 'pages/calificaciones';
+@use 'pages/contacto';
+
+/* Media Queries (responsive) */
+@use 'layout/media-queries';

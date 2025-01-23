@@ -1,0 +1,168 @@
+
+@use '../base/variables' as v;
+
+
+/* Resolución mínima: 576px */
+@media screen and (min-width: 576px) {
+    /* Home (index) */
+    .banner__slogan {
+        top: 25%;
+        right: 50%;
+        font-size: 2.25rem;
+    }
+
+    /* Cartelera */
+    .cartelera__ficha {
+        flex-direction: row;
+    }
+
+    .cartelera__poster {
+        min-width: 9rem;
+        min-height: 12rem;
+    }
+
+    .cartelera__contenido {
+        display: flex;
+        flex-direction: column;
+        border: 0;
+        border-left: 2px solid v.$color-primario;
+        min-height: 200px;
+    }
+
+    .cartelera__sinopsis {
+        margin-bottom: 0;
+        padding-left: 0.75rem;
+    }
+
+    .cartelera__ficha-tecnica {
+        display: block;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0.75rem;
+        padding-left: 0.75rem;
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+
+    /* Contacto */
+    .contactanos {
+        grid-template-areas:
+        "festeja    merchandising"
+        "sorteos    publicitar"
+        "eventos    eventos";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        column-gap: 1.5rem;
+    }
+}
+
+/* Resolución mínima: 768px */
+@media screen and (min-width: 768px) {
+    /* Home (index) */
+    .banner__slogan {
+        font-size: 3.25rem;
+    }
+
+    /* Cartelera (contenido películas) */
+    .pelicula {
+        grid-template-areas:
+        "poster         horarios"
+        "poster         ficha_tecnica"
+        "resumen        resumen"
+        "trailer        trailer";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        column-gap: 1.5rem;
+    }
+
+    /* Próximos Estrenos */
+    .estrenos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+    .estreno {
+        flex-grow: 1;
+        flex-basis: 0;
+        min-width: 19rem;
+    }
+
+    .estreno__poster {
+        width: 16rem;
+        height: 20rem;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Resolución mínima: 992px */
+@media screen and (min-width: 992px) {
+    /* Cartelera */
+    .cartelera__link:hover {
+        color: v.$color-primario-hover;
+    }
+
+    /* Cartelera (contenido películas) */
+    .titulo__link-volver {
+        display: inline;
+        color: v.$color-primario;
+    }
+
+    .pelicula {
+        grid-template-areas:
+        "poster         trailer"
+        "horarios       resumen"
+        "ficha_tecnica  resumen";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    /* Calificaciones */
+    .autorizacion__link {
+        padding: 0;
+        background-color: v.$color-bloque;
+        color: v.$color-primario;
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid v.$color-primario;
+
+        &:hover {
+            font-weight: 700;
+        }
+    }
+
+    /* Contacto */
+    .contactanos {
+        grid-template-areas:
+        "festeja    sorteos     sorteos     merchandising"
+        "publicitar publicitar  eventos     eventos";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .consulta__formulario {
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        max-width: 75%;
+    }
+
+    .formulario__enviar:hover {
+        background-color: v.$color-primario-hover;
+        color: v.$color-primario;
+        font-weight: 700;
+    }
+
+    /* Footer */
+    .footer__link {
+        padding: 0 0.5rem;
+
+        &:hover {
+            color: v.$color-secundario-hover;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+
+@use '../base/variables' as v;
+
+
+/* Próximos Estrenos */
+.estrenos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.estreno {
+    display: flex;
+    flex-direction: column;
+    margin: 1.25rem 2.5rem;
+    background-color: v.$color-bloque;
+    border: 1px solid v.$color-primario;
+    border-radius: 5px;
+}
+
+.estreno__titulo {
+    padding: 0.75rem;
+    background-color: v.$color-primario;
+    color: v.$color-secundario;
+    font-size: 1.35rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.estreno__fecha {
+    padding: 0.75rem;
+    text-align: center;
+    background-color: v.$color-primario-hover;
+    font-size: 1rem;
+}
+
+.estreno__poster {
+    width: 13rem;
+    height: 17rem;
+    margin: 1rem;
+    border: 1px solid v.$color-primario;
+    align-self: center;
+}
+
+.estreno__sinopsis {
+    margin: 0.75rem;
+    margin-top: 0;
+    padding-top: 0.75rem;
+    border-top: 2px solid v.$color-primario;
+    font-size: 0.8rem;
+    text-align: justify;
+}

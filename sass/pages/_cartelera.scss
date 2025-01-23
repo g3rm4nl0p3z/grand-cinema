@@ -1,0 +1,170 @@
+
+@use '../base/variables' as v;
+
+
+/* Cartelera */
+.cartelera {
+    margin: 1.5rem 2.5rem;
+    border: 1px solid v.$color-primario;
+    border-radius: 5px;
+    background-color: v.$color-bloque;
+}
+
+.cartelera__estreno {
+    display: flex;
+    justify-content: space-between;
+    background-color: v.$color-primario;
+}
+
+.cartelera__titulo {
+    padding: 0.75rem;
+    background-color: v.$color-primario;
+    font-size: 1.35em;
+}
+
+.cartelera__link {
+    color: v.$color-secundario;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cartelera__estreno-semanal {
+    padding: 0.75rem;
+    color: v.$color-secundario;
+    font-size: 0.5rem;
+    align-self: center;
+}
+
+.cartelera__ficha {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.cartelera__poster {
+    width: 9rem;
+    height: 12rem;
+    margin: 1rem 0.75rem;
+    margin-right: 0.5rem;
+    border: 1px solid v.$color-primario;
+    align-self: center;
+}
+
+.cartelera__contenido {
+    margin: 0.75rem;
+    border-top: 2px solid v.$color-primario;
+}
+
+.cartelera__sinopsis {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.75rem;
+    padding-top: 0.75rem;
+    font-size: 0.8rem;
+    text-align: justify;
+}
+
+.cartelera__ficha-tecnica {
+    display: none;
+}
+
+
+/* Cartelera (contenido películas) */
+.titulo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo__link-volver {
+    display: none;
+}
+
+.titulo__estreno {
+    margin: 1.25rem 2.5rem;
+    margin-top: -0.75rem;
+    background-color: v.$color-bloque;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.pelicula {
+    display: grid;
+    margin: 1.25rem 2.5rem;
+    grid-template-areas:
+    "poster"
+    "horarios"
+    "ficha_tecnica"
+    "resumen"
+    "trailer";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    row-gap: 0.75rem;
+}
+
+.pelicula__poster {
+    grid-area: poster;
+    justify-self: center;
+}
+
+.poster__poster {
+    border: 1px solid v.$color-primario;
+}
+
+.pelicula__horarios {
+    grid-area: horarios;
+    margin: 0.5rem 0;
+}
+
+.horarios__horario {
+    padding: 0.5rem 0.75rem;
+    background-color: v.$color-bloque;
+    border: 1px solid v.$color-primario;
+}
+
+.horarios__formato {
+    background-color: v.$color-bloque;
+    color: v.$color-primario;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.horarios__funciones {
+    padding-top: 0.25rem;
+    background-color: v.$color-bloque;
+    font-size: 0.9rem;
+}
+
+.pelicula__ficha {
+    grid-area: ficha_tecnica;
+}
+
+.pelicula__resumen {
+    grid-area: resumen;
+}
+
+.ficha__titulo,
+.resumen__titulo {
+    color: v.$color-primario;
+    border-bottom: 2px solid v.$color-primario;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.ficha__ficha-tecnica,
+.resumen__sinopsis {
+    margin: 0.75rem 0;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.pelicula__trailer {
+    grid-area: trailer;
+    justify-self: center;
+    align-self: center;
+}
+
+.trailer__video {
+    width: 29rem;
+    height: 20rem;
+}

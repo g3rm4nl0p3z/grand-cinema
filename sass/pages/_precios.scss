@@ -1,0 +1,33 @@
+
+@use '../base/variables' as v;
+
+
+/* Precios */
+.precios {
+    display: flex;
+    flex-direction: column;
+    margin: 1.25rem 2.5rem;
+}
+
+.precios__precios,
+.precios__informacion {
+    margin-bottom: 1rem;
+    font-size: 0.70rem;
+}
+
+.table__titulos {
+    font-size: 1rem;
+}
+
+.precios__adicional {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.informacion__link {
+    color: v.$color-primario;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}

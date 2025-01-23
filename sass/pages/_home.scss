@@ -1,0 +1,38 @@
+
+@use '../base/variables' as v;
+
+
+/* Home (index) */
+.banner {
+    margin: 1.5rem 2.5rem;
+    position: relative;
+    text-align: center;
+}
+
+.banner__slogan {
+    position: absolute;
+    top: 10%;
+    right: 40%;
+    color: v.$color-secundario;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 1px v.$color-primario;
+}
+
+.banner__grand-cinema {
+    width: 100%;
+}
+
+.peliculas {
+    padding: 1.25rem 0;
+}
+
+.peliculas--estrenos {
+    background-color: v.$color-bloque;
+}
+
+.carousel__estrenos,
+.carousel__proximos-estrenos,
+.carousel__anticipadas {
+    margin: 1.25rem 2.5rem;
+}
