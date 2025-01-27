@@ -7,20 +7,22 @@
   max-width: 100%;
 }
 
+/* Paleta de colores */
+/* Tamaños tipografía */
+/* Grosos tipografía */
 body {
   font-family: "Montserrat"; /* Tipografía */
-  font-weight: 400;
   font-size: 1rem;
+  font-weight: 400;
   min-width: 315px; /* Tamaño mínimo del sitio */
 }
 
-/* Paleta de colores */
-/* Header */
-.header {
-  background-color: #33052e;
+header, footer {
   padding: 0.75rem 2.5rem;
+  background-color: #33052e;
 }
 
+/* Mixins */
 .header__logo {
   width: 4.5rem;
   height: 4.5rem;
@@ -31,20 +33,19 @@ body {
   margin: 1.25rem 2.5rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid #33052e;
-  color: #33052e;
   font-size: 2rem;
   letter-spacing: 3px;
+  color: #33052e;
 }
 
 /* Footer */
 .footer {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0.75rem 2.5rem;
-  background-color: #33052e;
-  color: #f2e5a2;
   font-size: 1rem;
+  color: #f2e5a2;
 }
 
 .footer__logo {
@@ -63,8 +64,8 @@ body {
 
 .footer__link {
   padding: 0 0.75rem;
-  color: #f2e5a2;
   font-size: 1.25rem;
+  color: #f2e5a2;
   text-decoration: none;
 }
 
@@ -73,21 +74,22 @@ body {
 .banner {
   margin: 1.5rem 2.5rem;
   position: relative;
-  text-align: center;
 }
 
 .banner__slogan {
   position: absolute;
   top: 10%;
   right: 40%;
-  color: #f2e5a2;
   font-size: 1.25rem;
   letter-spacing: 3px;
+  color: #f2e5a2;
+  text-align: center;
   -webkit-text-stroke: 1px #33052e;
 }
 
 .banner__grand-cinema {
   width: 100%;
+  height: auto;
 }
 
 .peliculas {
@@ -114,6 +116,7 @@ body {
 
 .cartelera__estreno {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   background-color: #33052e;
 }
@@ -121,7 +124,7 @@ body {
 .cartelera__titulo {
   padding: 0.75rem;
   background-color: #33052e;
-  font-size: 1.35em;
+  font-size: 1.25rem;
 }
 
 .cartelera__link {
@@ -132,25 +135,26 @@ body {
 
 .cartelera__estreno-semanal {
   padding: 0.75rem;
+  font-size: 0.65rem;
   color: #f2e5a2;
-  font-size: 0.5rem;
   align-self: center;
 }
 
 .cartelera__ficha {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .cartelera__poster {
   width: 9rem;
   height: 12rem;
+  align-self: center;
   margin: 1rem 0.75rem;
   margin-right: 0.5rem;
   border: 1px solid #33052e;
-  align-self: center;
 }
 
 .cartelera__contenido {
@@ -162,7 +166,7 @@ body {
   margin-bottom: 1rem;
   padding: 0.5rem 0.75rem;
   padding-top: 0.75rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-align: justify;
 }
 
@@ -173,6 +177,7 @@ body {
 /* Cartelera (contenido películas) */
 .titulo {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -190,11 +195,11 @@ body {
 
 .pelicula {
   display: grid;
-  margin: 1.25rem 2.5rem;
   grid-template-areas: "poster" "horarios" "ficha_tecnica" "resumen" "trailer";
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
   row-gap: 0.75rem;
+  margin: 1.25rem 2.5rem;
 }
 
 .pelicula__poster {
@@ -219,16 +224,16 @@ body {
 
 .horarios__formato {
   background-color: #e4e4e4;
-  color: #33052e;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 2px;
+  color: #33052e;
 }
 
 .horarios__funciones {
   padding-top: 0.25rem;
   background-color: #e4e4e4;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .pelicula__ficha {
@@ -241,17 +246,17 @@ body {
 
 .ficha__titulo,
 .resumen__titulo {
-  color: #33052e;
   border-bottom: 2px solid #33052e;
   font-size: 1.5rem;
   letter-spacing: 2px;
+  color: #33052e;
 }
 
 .ficha__ficha-tecnica,
 .resumen__sinopsis {
   margin: 0.75rem 0;
   margin-bottom: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .pelicula__trailer {
@@ -269,40 +274,42 @@ body {
 .estrenos {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   margin-bottom: 1.5rem;
 }
 
 .estreno {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   margin: 1.25rem 2.5rem;
-  background-color: #e4e4e4;
   border: 1px solid #33052e;
   border-radius: 5px;
+  background-color: #e4e4e4;
 }
 
 .estreno__titulo {
   padding: 0.75rem;
   background-color: #33052e;
+  font-size: 1.25rem;
   color: #f2e5a2;
-  font-size: 1.35rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 .estreno__fecha {
   padding: 0.75rem;
-  text-align: center;
   background-color: #94748c;
   font-size: 1rem;
+  text-align: center;
 }
 
 .estreno__poster {
   width: 13rem;
   height: 17rem;
+  align-self: center;
   margin: 1rem;
   border: 1px solid #33052e;
-  align-self: center;
 }
 
 .estreno__sinopsis {
@@ -310,7 +317,7 @@ body {
   margin-top: 0;
   padding-top: 0.75rem;
   border-top: 2px solid #33052e;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-align: justify;
 }
 
@@ -318,13 +325,14 @@ body {
 .precios {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   margin: 1.25rem 2.5rem;
 }
 
 .precios__precios,
 .precios__informacion {
   margin-bottom: 1rem;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 .table__titulos {
@@ -338,9 +346,9 @@ body {
 }
 
 .informacion__link {
-  color: #33052e;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
+  color: #33052e;
   text-decoration: none;
 }
 
@@ -351,18 +359,20 @@ body {
 
 .calificaciones__card {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
 .calificaciones__mpa {
-  min-width: 150px;
   margin: 0.5rem 0;
   padding: 0.5rem;
   border: 1px solid #33052e;
   border-radius: 5px;
   font-weight: 600;
   text-align: center;
+  min-width: 150px;
 }
 
 .calificaciones__mpa--atp {
@@ -380,7 +390,7 @@ body {
 .calificaciones__descripcion {
   margin: 0.5rem;
   padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .autorizacion {
@@ -390,56 +400,57 @@ body {
 }
 
 .autorizacion__titulo {
-  color: #33052e;
   border-bottom: 2px solid #33052e;
   font-size: 1.5rem;
   letter-spacing: 2px;
+  color: #33052e;
 }
 
 .autorizacion__subtitulo {
   margin-top: 0.75rem;
-  color: #33052e;
   font-size: 1rem;
   letter-spacing: 2px;
+  color: #33052e;
 }
 
 .autorizacion__descripcion {
   margin: 0.75rem 0;
   margin-bottom: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .autorizacion__resolucion {
-  color: #33052e;
   font-weight: 700;
+  color: #33052e;
 }
 
 .autorizacion__link {
   margin: 0.75rem 0;
   padding: 0.5rem;
-  background-color: #dda947;
-  color: #33052e;
   border: 2px solid #33052e;
   border-radius: 5px;
-  font-size: 0.9rem;
+  background-color: #dda947;
+  font-size: 0.85rem;
+  color: #33052e;
   text-decoration: none;
 }
 
 /* Contacto */
 .contactanos {
   display: grid;
-  margin: 1.25rem 2.5rem;
   grid-template-areas: "festeja" "merchandising" "sorteos" "publicitar" "eventos";
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
   row-gap: 0.75rem;
+  margin: 1.25rem 2.5rem;
 }
 
 .contactanos__ofertas {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .ofertas--festeja {
@@ -478,10 +489,10 @@ body {
 }
 
 .consulta__titulo {
-  color: #33052e;
   border-bottom: 2px solid #33052e;
   font-size: 1.5rem;
   letter-spacing: 2px;
+  color: #33052e;
 }
 
 .consulta__formulario {
@@ -495,7 +506,7 @@ body {
 
 .formulario__label {
   margin: 5px 0;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
@@ -517,12 +528,12 @@ body {
 .formulario__enviar {
   width: 100%;
   padding: 5px;
-  background-color: #33052e;
-  color: #f2e5a2;
   border: 1px solid #33052e;
   border-radius: 5px;
+  background-color: #33052e;
   font-weight: 600;
   letter-spacing: 2px;
+  color: #f2e5a2;
   text-transform: uppercase;
 }
 
@@ -537,7 +548,9 @@ body {
   }
   /* Cartelera */
   .cartelera__ficha {
+    display: flex;
     flex-direction: row;
+    justify-content: flex-start;
   }
   .cartelera__poster {
     min-width: 9rem;
@@ -546,6 +559,7 @@ body {
   .cartelera__contenido {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     border: 0;
     border-left: 2px solid #33052e;
     min-height: 200px;
@@ -559,11 +573,12 @@ body {
     margin-bottom: 1rem;
     padding: 0.5rem 0.75rem;
     padding-left: 0.75rem;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-align: justify;
   }
   /* Contacto */
   .contactanos {
+    display: grid;
     grid-template-areas: "festeja    merchandising" "sorteos    publicitar" "eventos    eventos";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -578,6 +593,7 @@ body {
   }
   /* Cartelera (contenido películas) */
   .pelicula {
+    display: grid;
     grid-template-areas: "poster         horarios" "poster         ficha_tecnica" "resumen        resumen" "trailer        trailer";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -586,8 +602,9 @@ body {
   /* Próximos Estrenos */
   .estrenos {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   .estreno {
     flex-grow: 1;
@@ -598,8 +615,15 @@ body {
     width: 16rem;
     height: 20rem;
   }
+  .consulta__formulario {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 80%;
+  }
   /* Footer */
   .footer {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -616,6 +640,7 @@ body {
     color: #33052e;
   }
   .pelicula {
+    display: grid;
     grid-template-areas: "poster         trailer" "horarios       resumen" "ficha_tecnica  resumen";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -623,31 +648,29 @@ body {
   /* Calificaciones */
   .autorizacion__link {
     padding: 0;
-    background-color: #e4e4e4;
-    color: #33052e;
     border: none;
     border-radius: 0;
     border-bottom: 2px solid #33052e;
+    background-color: #e4e4e4;
+    color: #33052e;
   }
   .autorizacion__link:hover {
     font-weight: 700;
   }
   /* Contacto */
   .contactanos {
+    display: grid;
     grid-template-areas: "festeja    sorteos     sorteos     merchandising" "publicitar publicitar  eventos     eventos";
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
   }
   .consulta__formulario {
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    max-width: 75%;
+    max-width: 65%;
   }
   .formulario__enviar:hover {
     background-color: #94748c;
-    color: #33052e;
     font-weight: 700;
+    color: #33052e;
   }
   /* Footer */
   .footer__link {

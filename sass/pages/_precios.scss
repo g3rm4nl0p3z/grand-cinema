@@ -1,33 +1,33 @@
 
-@use '../base/variables' as v;
+@use '../utils/variables' as v;
+@use '../utils/mixins' as mix;
 
 
 /* Precios */
 .precios {
-    display: flex;
-    flex-direction: column;
+    @include mix.d-flex(column);
     margin: 1.25rem 2.5rem;
 }
 
 .precios__precios,
 .precios__informacion {
     margin-bottom: 1rem;
-    font-size: 0.70rem;
+    font-size: v.$font-informacion;
 }
 
 .table__titulos {
-    font-size: 1rem;
+    font-size: v.$font-normal;
 }
 
 .precios__adicional {
-    font-size: 0.65rem;
-    font-weight: 700;
+    font-size: v.$font-caption;
+    font-weight: v.$font-bold;
     text-align: center;
 }
 
 .informacion__link {
+    font-size: v.$font-descripcion;
+    font-weight: v.$font-bold;
     color: v.$color-primario;
-    font-size: 0.8rem;
-    font-weight: 700;
     text-decoration: none;
 }

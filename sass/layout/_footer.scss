@@ -1,21 +1,18 @@
 
-@use '../base/variables' as v;
+@use '../utils/variables' as v;
+@use '../utils/mixins' as mix;
 
 
 /* Footer */
 .footer {
-    display: flex;
-    flex-direction: column;
+    @include mix.d-flex(column);
     align-items: center;
-    padding: 0.75rem 2.5rem;
-    background-color: v.$color-primario;
+    font-size: v.$font-normal;
     color: v.$color-secundario;
-    font-size: 1rem;
 }
 
 .footer__logo {
-    width: 4.5rem;
-    height: 4.5rem;
+    @include mix.d-media(4.5rem, 4.5rem);
 }
 
 .footer__copy {
@@ -29,7 +26,7 @@
 
 .footer__link {
     padding: 0 0.75rem;
+    font-size: v.$font-icons;
     color: v.$color-secundario;
-    font-size: 1.25rem;
     text-decoration: none;
 }

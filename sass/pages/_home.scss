@@ -1,26 +1,28 @@
 
-@use '../base/variables' as v;
+@use '../utils/variables' as v;
+@use '../utils/mixins' as mix;
 
 
 /* Home (index) */
 .banner {
     margin: 1.5rem 2.5rem;
     position: relative;
-    text-align: center;
 }
 
 .banner__slogan {
     position: absolute;
     top: 10%;
     right: 40%;
-    color: v.$color-secundario;
-    font-size: 1.25rem;
+    font-size: v.$font-titulos;
     letter-spacing: 3px;
+    color: v.$color-secundario;
+    text-align: center;
     -webkit-text-stroke: 1px v.$color-primario;
 }
 
 .banner__grand-cinema {
-    width: 100%;
+    @include mix.d-media(100%, auto);
+
 }
 
 .peliculas {
@@ -28,7 +30,7 @@
 }
 
 .peliculas--estrenos {
-    background-color: v.$color-bloque;
+    background-color: v.$color-seccion;
 }
 
 .carousel__estrenos,

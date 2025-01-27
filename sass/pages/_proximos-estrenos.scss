@@ -1,45 +1,43 @@
 
-@use '../base/variables' as v;
+@use '../utils/variables' as v;
+@use '../utils/mixins' as mix;
 
 
 /* Próximos Estrenos */
 .estrenos {
-    display: flex;
-    flex-direction: column;
+    @include mix.d-flex(column);
     margin-bottom: 1.5rem;
 }
 
 .estreno {
-    display: flex;
-    flex-direction: column;
+    @include mix.d-flex(column);
     margin: 1.25rem 2.5rem;
-    background-color: v.$color-bloque;
     border: 1px solid v.$color-primario;
     border-radius: 5px;
+    background-color: v.$color-seccion;
 }
 
 .estreno__titulo {
     padding: 0.75rem;
     background-color: v.$color-primario;
+    font-size: v.$font-titulos;
     color: v.$color-secundario;
-    font-size: 1.35rem;
     text-align: center;
     text-transform: uppercase;
 }
 
 .estreno__fecha {
     padding: 0.75rem;
-    text-align: center;
     background-color: v.$color-primario-hover;
-    font-size: 1rem;
+    font-size: v.$font-normal;
+    text-align: center;
 }
 
 .estreno__poster {
-    width: 13rem;
-    height: 17rem;
+    @include mix.d-media(13rem, 17rem);
+    align-self: center;
     margin: 1rem;
     border: 1px solid v.$color-primario;
-    align-self: center;
 }
 
 .estreno__sinopsis {
@@ -47,6 +45,6 @@
     margin-top: 0;
     padding-top: 0.75rem;
     border-top: 2px solid v.$color-primario;
-    font-size: 0.8rem;
+    font-size: v.$font-informacion;
     text-align: justify;
 }

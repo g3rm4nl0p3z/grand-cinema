@@ -1,0 +1,19 @@
+
+/* Mixins */
+@mixin d-media ($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin d-flex ($direction, $justify: flex-start) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+@mixin d-grid ($area, $cols, $rows) {
+    display: grid;
+    grid-template-areas: $area;
+    grid-template-columns: $cols;
+    grid-template-rows: $rows;
+}

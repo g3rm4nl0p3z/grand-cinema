@@ -1,5 +1,6 @@
 
-@use '../base/variables' as v;
+@use '../utils/variables' as v;
+@use '../utils/mixins' as mix;
 
 
 /* Resolución mínima: 576px */
@@ -8,12 +9,12 @@
     .banner__slogan {
         top: 25%;
         right: 50%;
-        font-size: 2.25rem;
+        font-size: v.$font-banner;
     }
 
     /* Cartelera */
     .cartelera__ficha {
-        flex-direction: row;
+        @include mix.d-flex(row);
     }
 
     .cartelera__poster {
@@ -22,8 +23,7 @@
     }
 
     .cartelera__contenido {
-        display: flex;
-        flex-direction: column;
+        @include mix.d-flex(column);
         border: 0;
         border-left: 2px solid v.$color-primario;
         min-height: 200px;
@@ -39,18 +39,17 @@
         margin-bottom: 1rem;
         padding: 0.5rem 0.75rem;
         padding-left: 0.75rem;
-        font-size: 0.8rem;
+        font-size: v.$font-informacion;
         text-align: justify;
     }
 
     /* Contacto */
     .contactanos {
-        grid-template-areas:
-        "festeja    merchandising"
-        "sorteos    publicitar"
-        "eventos    eventos";
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
+        @include mix.d-grid("festeja    merchandising"
+                            "sorteos    publicitar"
+                            "eventos    eventos",
+                            repeat(2, 1fr),
+                            repeat(3, auto));
         column-gap: 1.5rem;
     }
 }
@@ -59,26 +58,24 @@
 @media screen and (min-width: 768px) {
     /* Home (index) */
     .banner__slogan {
-        font-size: 3.25rem;
+        font-size: v.$font-banner-lg;
     }
 
     /* Cartelera (contenido películas) */
     .pelicula {
-        grid-template-areas:
-        "poster         horarios"
-        "poster         ficha_tecnica"
-        "resumen        resumen"
-        "trailer        trailer";
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, auto);
+        @include mix.d-grid("poster         horarios"
+                            "poster         ficha_tecnica"
+                            "resumen        resumen"
+                            "trailer        trailer",
+                            repeat(2, 1fr),
+                            repeat(4, auto));
         column-gap: 1.5rem;
     }
 
     /* Próximos Estrenos */
     .estrenos {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
+        @include mix.d-flex(row, space-evenly);
+        flex-wrap: wrap;
     }
 
     .estreno {
@@ -88,14 +85,19 @@
     }
 
     .estreno__poster {
-        width: 16rem;
-        height: 20rem;
+        @include mix.d-media(16rem, 20rem);
+    }
+
+    .consulta__formulario {
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        max-width: 80%;
     }
 
     /* Footer */
     .footer {
-        flex-direction: row;
-        justify-content: space-between;
+        @include mix.d-flex(row, space-between);
     }
 }
 
@@ -113,48 +115,43 @@
     }
 
     .pelicula {
-        grid-template-areas:
-        "poster         trailer"
-        "horarios       resumen"
-        "ficha_tecnica  resumen";
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
+        @include mix.d-grid("poster         trailer"
+                            "horarios       resumen"
+                            "ficha_tecnica  resumen",
+                            repeat(2, 1fr),
+                            repeat(3, auto));
     }
 
     /* Calificaciones */
     .autorizacion__link {
         padding: 0;
-        background-color: v.$color-bloque;
-        color: v.$color-primario;
         border: none;
         border-radius: 0;
         border-bottom: 2px solid v.$color-primario;
+        background-color: v.$color-seccion;
+        color: v.$color-primario;
 
         &:hover {
-            font-weight: 700;
+            font-weight: v.$font-bold;
         }
     }
 
     /* Contacto */
     .contactanos {
-        grid-template-areas:
-        "festeja    sorteos     sorteos     merchandising"
-        "publicitar publicitar  eventos     eventos";
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, auto);
+        @include mix.d-grid("festeja    sorteos     sorteos     merchandising"
+                            "publicitar publicitar  eventos     eventos",
+                            repeat(4, 1fr),
+                            repeat(2, auto));
     }
 
     .consulta__formulario {
-        margin: auto;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        max-width: 75%;
+        max-width: 65%;
     }
 
     .formulario__enviar:hover {
         background-color: v.$color-primario-hover;
+        font-weight: v.$font-bold;
         color: v.$color-primario;
-        font-weight: 700;
     }
 
     /* Footer */

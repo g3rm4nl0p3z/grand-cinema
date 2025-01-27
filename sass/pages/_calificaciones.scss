@@ -1,5 +1,6 @@
 
-@use '../base/variables' as v;
+@use '../utils/variables' as v;
+@use '../utils/mixins' as mix;
 
 
 /* Calificaciones */
@@ -8,19 +9,19 @@
 }
 
 .calificaciones__card {
-    display: flex;
-    flex-flow: row nowrap;
+    @include mix.d-flex(row);
+    flex-wrap: nowrap;
     align-items: center;
 }
 
 .calificaciones__mpa {
-    min-width: 150px;
     margin: 0.5rem 0;
     padding: 0.5rem;
     border: 1px solid v.$color-primario;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: v.$font-semibold;
     text-align: center;
+    min-width: 150px;
 }
 
 .calificaciones__mpa--atp {
@@ -38,47 +39,47 @@
 .calificaciones__descripcion {
     margin: 0.5rem;
     padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
+    font-size: v.$font-informacion;
 }
 
 .autorizacion {
     margin: 2.5rem 0;
     padding: 1.5rem 2.5rem;
-    background-color: v.$color-bloque;
+    background-color: v.$color-seccion;
 }
 
 .autorizacion__titulo {
-    color: v.$color-primario;
     border-bottom: 2px solid v.$color-primario;
-    font-size: 1.5rem;
+    font-size: v.$font-seccion;
     letter-spacing: 2px;
+    color: v.$color-primario;
 }
 
 .autorizacion__subtitulo {
     margin-top: 0.75rem;
-    color: v.$color-primario;
-    font-size: 1rem;
+    font-size: v.$font-normal;
     letter-spacing: 2px;
+    color: v.$color-primario;
 }
 
 .autorizacion__descripcion {
     margin: 0.75rem 0;
     margin-bottom: 1.25rem;
-    font-size: 0.9rem;
+    font-size: v.$font-informacion;
 }
 
 .autorizacion__resolucion {
+    font-weight: v.$font-bold;
     color: v.$color-primario;
-    font-weight: 700;
 }
 
 .autorizacion__link {
     margin: 0.75rem 0;
     padding: 0.5rem;
-    background-color: v.$color-secundario-hover;
-    color: v.$color-primario;
     border: 2px solid v.$color-primario;
     border-radius: 5px;
-    font-size: 0.9rem;
+    background-color: v.$color-secundario-hover;
+    font-size: v.$font-descripcion;
+    color: v.$color-primario;
     text-decoration: none;
 }

@@ -1,7 +1,15 @@
 
+@use '../utils/variables' as v;
+
+
 body {
     font-family: "Montserrat";  /* Tipografía */
-    font-weight: 400;
-    font-size: 1rem;
+    font-size: v.$font-normal;
+    font-weight: v.$font-regular;
     min-width: 315px; /* Tamaño mínimo del sitio */
+}
+
+header, footer {
+    padding: 0.75rem 2.5rem;
+    background-color: v.$color-primario;
 }

@@ -1,5 +1,6 @@
 
-@use '../base/variables' as v;
+@use '../utils/variables' as v;
+@use '../utils/mixins' as mix;
 
 
 /* Cartelera */
@@ -7,19 +8,18 @@
     margin: 1.5rem 2.5rem;
     border: 1px solid v.$color-primario;
     border-radius: 5px;
-    background-color: v.$color-bloque;
+    background-color: v.$color-seccion;
 }
 
 .cartelera__estreno {
-    display: flex;
-    justify-content: space-between;
+    @include mix.d-flex(row, space-between);
     background-color: v.$color-primario;
 }
 
 .cartelera__titulo {
     padding: 0.75rem;
     background-color: v.$color-primario;
-    font-size: 1.35em;
+    font-size: v.$font-titulos;
 }
 
 .cartelera__link {
@@ -30,25 +30,23 @@
 
 .cartelera__estreno-semanal {
     padding: 0.75rem;
+    font-size: v.$font-caption;
     color: v.$color-secundario;
-    font-size: 0.5rem;
     align-self: center;
 }
 
 .cartelera__ficha {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5rem;
+    @include mix.d-flex(column);
     align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .cartelera__poster {
-    width: 9rem;
-    height: 12rem;
+    @include mix.d-media(9rem, 12rem);
+    align-self: center;
     margin: 1rem 0.75rem;
     margin-right: 0.5rem;
     border: 1px solid v.$color-primario;
-    align-self: center;
 }
 
 .cartelera__contenido {
@@ -60,7 +58,7 @@
     margin-bottom: 1rem;
     padding: 0.5rem 0.75rem;
     padding-top: 0.75rem;
-    font-size: 0.8rem;
+    font-size: v.$font-informacion;
     text-align: justify;
 }
 
@@ -71,8 +69,7 @@
 
 /* Cartelera (contenido películas) */
 .titulo {
-    display: flex;
-    justify-content: space-between;
+    @include mix.d-flex(row, space-between);
 }
 
 .titulo__link-volver {
@@ -82,23 +79,21 @@
 .titulo__estreno {
     margin: 1.25rem 2.5rem;
     margin-top: -0.75rem;
-    background-color: v.$color-bloque;
-    font-size: 1rem;
+    background-color: v.$color-seccion;
+    font-size: v.$font-normal;
     letter-spacing: 2px;
 }
 
 .pelicula {
-    display: grid;
-    margin: 1.25rem 2.5rem;
-    grid-template-areas:
-    "poster"
-    "horarios"
-    "ficha_tecnica"
-    "resumen"
-    "trailer";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
+    @include mix.d-grid("poster"
+                        "horarios"
+                        "ficha_tecnica"
+                        "resumen"
+                        "trailer",
+                        1fr,
+                        repeat(5, auto));
     row-gap: 0.75rem;
+    margin: 1.25rem 2.5rem;
 }
 
 .pelicula__poster {
@@ -117,22 +112,22 @@
 
 .horarios__horario {
     padding: 0.5rem 0.75rem;
-    background-color: v.$color-bloque;
+    background-color: v.$color-seccion;
     border: 1px solid v.$color-primario;
 }
 
 .horarios__formato {
-    background-color: v.$color-bloque;
-    color: v.$color-primario;
-    font-size: 1rem;
-    font-weight: 700;
+    background-color: v.$color-seccion;
+    font-size: v.$font-normal;
+    font-weight: v.$font-bold;
     letter-spacing: 2px;
+    color: v.$color-primario;
 }
 
 .horarios__funciones {
     padding-top: 0.25rem;
-    background-color: v.$color-bloque;
-    font-size: 0.9rem;
+    background-color: v.$color-seccion;
+    font-size: v.$font-descripcion;
 }
 
 .pelicula__ficha {
@@ -145,17 +140,17 @@
 
 .ficha__titulo,
 .resumen__titulo {
-    color: v.$color-primario;
     border-bottom: 2px solid v.$color-primario;
-    font-size: 1.5rem;
+    font-size: v.$font-seccion;
     letter-spacing: 2px;
+    color: v.$color-primario;
 }
 
 .ficha__ficha-tecnica,
 .resumen__sinopsis {
     margin: 0.75rem 0;
     margin-bottom: 1.25rem;
-    font-size: 0.9rem;
+    font-size: v.$font-informacion;
 }
 
 .pelicula__trailer {
@@ -165,6 +160,5 @@
 }
 
 .trailer__video {
-    width: 29rem;
-    height: 20rem;
+    @include mix.d-media(29rem, 20rem);
 }

@@ -1,14 +1,7 @@
 
-@use '../base/variables' as v;
+@use '../utils/mixins' as mix;
 
-
-/* Header */
-.header {
-    background-color: v.$color-primario;
-    padding: 0.75rem 2.5rem;
-}
 
 .header__logo {
-    width: 4.5rem;
-    height: 4.5rem;
+    @include mix.d-media(4.5rem, 4.5rem);
 }

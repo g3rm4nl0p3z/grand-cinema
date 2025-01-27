@@ -1,27 +1,25 @@
 
-@use '../base/variables' as v;
+@use '../utils/variables' as v;
+@use '../utils/mixins' as mix;
 
 
 /* Contacto */
 .contactanos {
-    display: grid;
-    margin: 1.25rem 2.5rem;
-    grid-template-areas:
-    "festeja"
-    "merchandising"
-    "sorteos"
-    "publicitar"
-    "eventos";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
+    @include mix.d-grid("festeja"
+                        "merchandising"
+                        "sorteos"
+                        "publicitar"
+                        "eventos",
+                        1fr,
+                        repeat(5, auto));
     row-gap: 0.75rem;
+    margin: 1.25rem 2.5rem;
 }
 
 .contactanos__ofertas {
-    display: flex;
-    flex-direction: column;
+    @include mix.d-flex(column);
     align-items: center;
-    font-size: 0.80rem;
+    font-size: v.$font-informacion;
 }
 
 .ofertas--festeja {
@@ -56,14 +54,14 @@
 .deja-tu-consulta {
     margin: 2.5rem 0;
     padding: 1.5rem 2.5rem;
-    background-color: v.$color-bloque;
+    background-color: v.$color-seccion;
 }
 
 .consulta__titulo {
-    color: v.$color-primario;
     border-bottom: 2px solid v.$color-primario;
-    font-size: 1.5rem;
+    font-size: v.$font-seccion;
     letter-spacing: 2px;
+    color: v.$color-primario;
 }
 
 .consulta__formulario {
@@ -72,13 +70,13 @@
 
 .formulario__campo {
     margin: 1.25rem 0;
-    font-size: 0.75rem;
+    font-size: v.$font-informacion;
 }
 
 .formulario__label {
     margin: 5px 0;
-    font-size: 0.80rem;
-    font-weight: 700;
+    font-size: v.$font-descripcion;
+    font-weight: v.$font-bold;
 }
 
 .formulario__input {
@@ -99,11 +97,11 @@
 .formulario__enviar {
     width: 100%;
     padding: 5px;
-    background-color: v.$color-primario;
-    color: v.$color-secundario;
     border: 1px solid v.$color-primario;
     border-radius: 5px;
-    font-weight: 600;
+    background-color: v.$color-primario;
+    font-weight: v.$font-semibold;
     letter-spacing: 2px;
+    color: v.$color-secundario;
     text-transform: uppercase;
 }
